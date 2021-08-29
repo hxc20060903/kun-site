@@ -1,0 +1,22 @@
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  max-width: 300px;
+  overflow: hidden;
+}
+.img-wrapper-title {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  color: #222;
+  font-size: 1.6em;
+  font-weight: bold;
+  transform: translateX(100%);
+  transition: transform ease-out 0.5s;
+}
+
+.img-wrapper-title.active {
+  transform: translateX(-100%);
+  transition-delay: 0.3s;
+}
