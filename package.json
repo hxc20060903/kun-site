@@ -36,6 +36,7 @@
     "scrollmagic": "^2.0.8"
   },
   "devDependencies": {
+    "@line/liff": "^2.13.0",
     "@types/react-helmet": "^6.1.2",
     "@types/scrollmagic": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^4.29.3",

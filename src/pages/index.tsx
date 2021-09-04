@@ -25,6 +25,7 @@ const IndexPage = (): JSX.Element => {
     }
     return () => {
       scene.destroy(true);
+      controller.destroy(true);
     };
   }, [typeof ScrollMagic]);
   return (

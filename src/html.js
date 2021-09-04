@@ -36,6 +36,10 @@ export default function HTML(props) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <script
+          charSet="utf-8"
+          src="https://static.line-scdn.net/liff/edge/versions/2.13.0/sdk.js"
+        ></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
