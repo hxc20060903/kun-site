@@ -1,8 +1,5 @@
 .container {
-  margin: auto;
   min-height: 100vh;
-  font-family: sans-serif;
-}
-.heading {
-  color: rebeccapurple;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }

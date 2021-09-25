@@ -40,6 +40,20 @@ export default function HTML(props) {
           charSet="utf-8"
           src="https://static.line-scdn.net/liff/edge/versions/2.13.0/sdk.js"
         ></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

@@ -1,6 +1,8 @@
 import React from 'react';
 import {
+  block,
   siteTitle,
+  siteNav,
   navLinks,
   navLinkItem,
   navLinkText,
@@ -9,9 +11,9 @@ import { Link } from 'gatsby';
 
 export const Header = ({ title }: { title: string }): JSX.Element => {
   return (
-    <header>
-      <div className={siteTitle}>{title}</div>
-      <nav>
+    <header className={block}>
+      <span className={siteTitle}>{title}</span>
+      <nav className={siteNav}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
@@ -21,11 +23,6 @@ export const Header = ({ title }: { title: string }): JSX.Element => {
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
             </Link>
           </li>
         </ul>

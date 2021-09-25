@@ -4,9 +4,7 @@ import Layout from '../components/layout';
 const AboutPage = (): JSX.Element => {
   return (
     <Layout pageTitle="About Me">
-      <p>
-        Hi there! I'm the proud creator of this site, which I built with Gatsby.
-      </p>
+      <p>Hi there! I am the proud creator of this site.</p>
     </Layout>
   );
 };

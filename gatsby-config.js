@@ -1,14 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
 
-const { BUCKET_NAME, SITE_ADDRESS, LIFF_ID } = process.env;
+const { BUCKET_NAME, SITE_ADDRESS, LIFF_ID, API_GATEWAY } = process.env;
 const siteAddress = new URL(SITE_ADDRESS);
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'kun-site',
+    siteUrl: siteAddress.href,
+    title: 'TerraBucks',
     liffId: LIFF_ID,
+    apiGateway: API_GATEWAY,
   },
   plugins: [
     'gatsby-plugin-gatsby-cloud',

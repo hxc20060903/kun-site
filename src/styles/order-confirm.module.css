@@ -1,0 +1,88 @@
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.box {
+  box-shadow: 2px 2px 2px grey, 0 0 2px grey;
+  border-radius: 0.5rem;
+  min-width: 400px;
+  max-width: 80vw;
+  min-height: 500px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.wait-icon, .success-icon, .warn-icon {
+  font-size: 6em;
+  margin-top: -0.5em;
+  margin-bottom: 2rem;
+}
+.line-break {
+  flex: 0 0 100%;
+}
+.wait-icon {
+  color: chocolate;
+  animation: waitIconAnimation 2s linear infinite;
+}
+
+@keyframes waitIconAnimation {
+  0%, 60%, 100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
+
+.success-icon {
+  color: green;
+  animation: successIconAnimation 0.6s ease-out;
+}
+@keyframes successIconAnimation {
+  0% {
+    opacity: 0.2;
+    margin-top: -1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -0.5em;
+  }
+}
+
+.warn-icon {
+  color: goldenrod;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px grey;
+  border-radius: 0.5em;
+  padding: 0.8em;
+  display: inline-block;
+  background-color:yellowgreen;
+  animation: linkAnimation 3s 3s infinite;
+}
+@keyframes linkAnimation {
+  0%, 20%, 50%, 70%, 90%, 100% {
+    text-shadow: 0 0 4px white,
+    0 0 8px white,
+    0 0 16px white,
+    0 0 24px white,
+    0 0 32px white;
+  }
+  35%, 60%, 75% {
+    text-shadow: none;
+  }
+}
