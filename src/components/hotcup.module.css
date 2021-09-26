@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #607d8b;
+  position: relative;
+  height: 100%;
+}
+.plate {
+  position: absolute;
+  background-image: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  height: 21em;
+  width: 48em;
+  border-radius: 50%;
+  transform: translateY(50%);
+  box-shadow: 0 2.5em 2.5em rgba(0,0,0, 0.3);
+}
+.plate::before {
+  content: '';
+  position: absolute;
+  inset: 1em;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #f9f9f9, #d9d9d9);
+}
+.plate::after {
+  content: '';
+  position: absolute;
+  inset: 3em;
+  border-radius: 50%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
+}
+.cup {
+  width: 28em;
+  height: 30em;
+  position: relative;
+  background-image: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 0 0 45% 45%;
+}
+.vapour {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1em;
+}
+.vapour-item {
+  width: 1em;
+  height: 5em;
+  background-color: white;
+  filter: blur(1em);
+  animation: vapourAnimation 2s calc(0.2s * var(--seed)) linear infinite;
+}
+@keyframes vapourAnimation {
+  0% {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-3em) scale(1.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5em) scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6em);
+  }
+}
+.fringe {
+  position: absolute;
+  top: -3em;
+  left: 0;
+  right: 0;
+  height: 6em;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #f9f9f9, #d9d9d9);
+}
+.innerFringe {
+  position: absolute;
+  inset: 0.5em 0.5em 0;
+  border-radius: 50%;
+  background-image: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  overflow: hidden;
+}
+.tea {
+  height: 100%;
+  background-image: linear-gradient(rgba(117, 51, 7, 0.9), rgba(153, 110, 57, 0.6));
+  border-radius: 50%;
+  transform: translateY(20%);
+}
+.handle {
+  position: absolute;
+  width: 14em;
+  height: 17em;
+  border: 2em solid #d9d9d9;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  right: -7em;
+  top: 2.5em;
+  transform: rotate(35deg);
+}

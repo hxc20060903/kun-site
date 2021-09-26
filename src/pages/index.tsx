@@ -2,6 +2,7 @@ import React, { MouseEvent, useCallback, useState } from 'react';
 import axios from 'axios';
 import Layout from '../components/layout';
 import { OrderItem } from '../components/orderItem';
+import { HotCup } from '../components/hotcup';
 import {
   orderForm,
   home,
@@ -38,8 +39,10 @@ const IndexPage = (): JSX.Element => {
     <Layout pageTitle="Home">
       <section className={home}>
         <form className={orderForm}>
-          <div className={orderTitle}>メニュー</div>
-          <div style={{ height: '200px' }}></div>
+          <div className={orderTitle}>見ているだけじゃ冷めるぞ</div>
+          <div style={{ height: '200px' }}>
+            <HotCup />
+          </div>
           <ul className={orderContent}>
             <li className={orderItem}>
               <OrderItem
