@@ -39,7 +39,7 @@ const IndexPage = (): JSX.Element => {
       <section className={home}>
         <form className={orderForm}>
           <div className={orderTitle}>メニュー</div>
-          <div style={{ height: '200px', boxShadow: '0 0 1px black' }}></div>
+          <div style={{ height: '200px' }}></div>
           <ul className={orderContent}>
             <li className={orderItem}>
               <OrderItem
